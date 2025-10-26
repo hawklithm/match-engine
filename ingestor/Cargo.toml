@@ -1,0 +1,18 @@
+[package]
+name = "ingestor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossbeam-channel = "0.5"
+match-engine = { path = "../engine" }
+
+[features]
+default = []
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "multipair_throughput"
+harness = false
